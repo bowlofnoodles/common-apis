@@ -28,6 +28,7 @@
     "cheerio": "^1.0.0-rc.10",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
+    "koa-logger": "^3.2.1",
     "koa-router": "^10.0.0",
     "module-alias": "^2.2.2"
   },

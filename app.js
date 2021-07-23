@@ -3,6 +3,7 @@ require('module-alias/register');
 const koa = require('koa');
 const cors = require('@koa/cors');
 const koaBody = require('koa-body');
+const koaLogger = require('koa-logger');
 const router = require('./src/route');
 
 const app = new koa();
@@ -10,6 +11,8 @@ const app = new koa();
 app.use(cors());
 
 app.use(koaBody());
+
+app.use(koaLogger());
 
 app.use(router.routes()).use(router.allowedMethods());
 
