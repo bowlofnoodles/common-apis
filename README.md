@@ -1,6 +1,6 @@
 # common-apis
 
-一些通用的node api
+一些通用的node api，部分接口使用的前端在线例子：[每日一看](https://daily.bowlofnoodles.top)
 
 ## 来源
 + 爬虫html
