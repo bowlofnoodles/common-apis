@@ -1,6 +1,6 @@
 # common-apis
 
-一些通用的api
+一些通用的node api
 
 ## 来源
 + 爬虫html
