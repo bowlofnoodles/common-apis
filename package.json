@@ -1,0 +1,40 @@
+{
+  "name": "koa-server",
+  "version": "1.0.0",
+  "description": "koa-server",
+  "main": "app.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon app.js",
+    "start": "NODE_ENV=production node app.js",
+    "lint": "eslint --fix \"src/**/*.js\"",
+    "commit": "git-cz"
+  },
+  "keywords": [
+    "koa-server"
+  ],
+  "_moduleAliases": {
+    "@": "src"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "author": "bowlofnoodles",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0",
+    "module-alias": "^2.2.2"
+  },
+  "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.28.0",
+    "nodemon": "^2.0.7"
+  }
+}
