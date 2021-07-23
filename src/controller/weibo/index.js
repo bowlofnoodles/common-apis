@@ -1,7 +1,7 @@
 const { getHotSpot } = require('@/service/hotSpot');
 const { generateError, generateSuccess } = require('@/utils/index');
 
-const index = async (ctx, next) => {
+const hotSport = async (ctx, next) => {
   try {
     const result = await getHotSpot();
     ctx.body = generateSuccess(result);
@@ -11,5 +11,5 @@ const index = async (ctx, next) => {
 };
 
 module.exports = {
-  index
+  hotSport
 };

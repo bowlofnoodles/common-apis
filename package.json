@@ -1,7 +1,7 @@
 {
-  "name": "weibo-apis",
+  "name": "common-apis",
   "version": "1.0.0",
-  "description": "some weibo-apis",
+  "description": "some common-apis",
   "main": "app.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon app.js",
@@ -10,9 +10,10 @@
     "commit": "git-cz"
   },
   "keywords": [
-    "weibo-apis",
+    "common-apis",
     "koa",
-    "weibo"
+    "weibo",
+    "douban"
   ],
   "_moduleAliases": {
     "@": "src"
