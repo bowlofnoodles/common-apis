@@ -21,3 +21,6 @@ const PORT = process.env['PORT'] || 627;
 app.listen(PORT, () => {
   console.log(`node server started listen on http://127.0.0.1:${PORT}`);
 });
+
+module.exports = app;
+
