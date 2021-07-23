@@ -1,7 +1,7 @@
 {
-  "name": "koa-server",
+  "name": "weibo-apis",
   "version": "1.0.0",
-  "description": "koa-server",
+  "description": "some weibo-apis",
   "main": "app.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon app.js",
@@ -10,7 +10,9 @@
     "commit": "git-cz"
   },
   "keywords": [
-    "koa-server"
+    "weibo-apis",
+    "koa",
+    "weibo"
   ],
   "_moduleAliases": {
     "@": "src"
