@@ -32,7 +32,7 @@
 > 点击url，可以查看获取结果。因为是部署在heroku上，所以有点慢...
 ### 微博相关
 
-+ [/weibo/hot_spot](http://bowlofnoodles-common-apis.herokuapp.com/weibo/hot_spot): 获取微博热搜
++ [/weibo/hot_spot](https://api.bowlofnoodles.top/common/weibo/hot_spot): 获取微博热搜
 
 ### 豆瓣相关
 
