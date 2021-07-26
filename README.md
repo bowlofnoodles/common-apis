@@ -29,7 +29,7 @@
 
 ## API
 
-> 点击url，可以查看获取结果。因为是部署在heroku上，所以有点慢...
+> 点击url，可以查看获取结果。因为是~~部署在heroku上，所以有点慢...~~，现在部署在阿里云上了，好多了...
 ### 微博相关
 
 #### [/weibo/hot_spot](https://api.bowlofnoodles.top/common/weibo/hot_spot)
