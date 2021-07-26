@@ -1,12 +1,10 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
+const { COMMON_SPIDER_HEADERS } = require('@/common/constants');
 
 const getHotSpot = async () => {
-  const headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
-  };
   const url = 'https://s.weibo.com/top/summary?Refer=top_hot&topnav=1&wvr=6';
-  const html = await axios.get(url, { headers });
+  const html = await axios.get(url, { headers: COMMON_SPIDER_HEADERS });
   const $ = cheerio.load(html && html.data);
   if (!$) throw new Error('UnRecorded Error');
   const line = $('#pl_top_realtimehot tbody tr');
@@ -18,9 +16,9 @@ const getHotSpot = async () => {
     const icon = $('td.td-03 i', node);
     return {
       iconText: icon.text(),
-      rank: i > 0 ? rank.text() : 'top',
+      rank: i > 0 ? Number(rank.text()) : 'top',
       title: affair.text(),
-      view: view.text(),
+      view: Number(view.text()),
       src: transformSrc(affair.attr('href'))
     };
   };

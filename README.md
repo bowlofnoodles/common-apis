@@ -32,8 +32,43 @@
 > 点击url，可以查看获取结果。因为是部署在heroku上，所以有点慢...
 ### 微博相关
 
-+ [/weibo/hot_spot](https://api.bowlofnoodles.top/common/weibo/hot_spot): 获取微博热搜
+#### [/weibo/hot_spot](https://api.bowlofnoodles.top/common/weibo/hot_spot)
+
+获取微博热搜
+
++ 返回结构说明：
+
+| 参数 | 说明 | 类型 | 默认值 |
+| -- | -- | -- | -- |
+| iconText | 话题火爆程度描述 | string | - |
+| rank | 排序 | number | 'top' | - |
+| title | 标题 | string | - |
+| view | 已看人数 | number | - |
+| src | 详情链接 | string | - |
 
 ### 豆瓣相关
 
-...
+#### [/douban/top_250](https://api.bowlofnoodles.top/common/douban/top_250?start=0)
+
+获取豆瓣电影top250
+
++ 参数说明：
+
+| 参数 | 说明 | 类型 | 默认值 |
+| -- | -- | -- | -- |
+| start | 起始数 | number | 0 |
+
+> 由于没找到豆瓣的每页数量的参数是啥，所以默认每页都是25条，start参数为起始数。
+
++ 返回结构说明：
+
+| 参数 | 说明 | 类型 | 默认值 |
+| -- | -- | -- | -- |
+| rank | 排名 | number | - |
+| picUrl | 海报图片 | string | - |
+| url | 详情链接 | string | - |
+| star | 豆瓣评分 | number | - |
+| comment | 评价人数 | number | - |
+| title | 标题 | string | - |
+| desc | 描述 | string | - |
+| quote | 简述 | string | - |
