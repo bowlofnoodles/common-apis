@@ -1,0 +1,43 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: centos-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install
+    - run: pm2 stop common-apis
+    - run: pm2 start npm --name common-apis -- start
+    # 部署到阿里云
+    - name: Deploy to Aliyun
+      uses: easingthemes/ssh-deploy@v2.1.1
+      env:
+        # 私钥
+        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        # scp参数
+        ARGS: "-avzr --delete"
+        # 服务器ip：换成你的服务器IP
+        REMOTE_HOST: "116.62.144.172"
+        # 用户
+        REMOTE_USER: "root"
+        # 目标地址 你在服务器上部署代码的地方
+        TARGET: "/root/code/common-apis"
+
