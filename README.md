@@ -2,6 +2,8 @@
 
 一些通用的node api，部分接口使用的前端在线例子：[每日一看](https://daily.bowlofnoodles.top)
 
+> 用vercel Functions做代理转发，结果被vercel封号了，目前域名都通不了。暂时不能在线看效果。用gitpod或者clone到本地吧..囧
+
 ## 开发
 
 ### shell
