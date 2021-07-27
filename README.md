@@ -2,6 +2,28 @@
 
 一些通用的node api，部分接口使用的前端在线例子：[每日一看](https://daily.bowlofnoodles.top)
 
+## 开发
+
+### shell
+
++ clone仓库到本地
+
+```
+git clone git@github.com:bowlofnoodles/common-apis.git
+```
+
++ 启动
+
+``` bash
+npm install
+npm run dev
+# visit http://localhost:627
+```
+
+也可以尝试一下gitpod在线打开（就是可能机子不好的话有点慢）：[gitpod在线地址](https://gitpod.io/#https://github.com/bowlofnoodles/common-apis)
+
+
+
 ## 来源
 + 爬虫html
 + 爬虫api
