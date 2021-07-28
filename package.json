@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon app.js",
-    "start": "cross-env NODE_ENV=production pm2 start -f app.js",
+    "start": "cross-env NODE_ENV=production bash ./start.bash",
     "lint": "eslint --fix \"src/**/*.js\"",
     "commit": "git-cz"
   },
