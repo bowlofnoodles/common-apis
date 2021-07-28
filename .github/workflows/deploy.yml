@@ -1,4 +1,4 @@
-name: Deploy files
+name: Aliyun Deploy files
 on:
   push:
     branches: [ main ]

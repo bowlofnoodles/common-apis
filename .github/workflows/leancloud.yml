@@ -1,0 +1,18 @@
+# Controls when the action will run. Triggers the workflow on push request for the main branch
+name: LeanCloud Deploy files
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: 'README.md'
+  pull_request:
+    branches: [ main ]
+    paths-ignore: 'README.md'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to LeanEngine
+      uses: enflo/curl-action@v1.2
+      with:
+        curl: -X POST https://cn-n1-console-api.leancloud.cn/1.1/engine/groups/web/production/version?gitTag=main&token=${{ secrets.LEANCLOUD_DEPLOY_TOKEN }}
