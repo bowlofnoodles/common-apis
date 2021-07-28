@@ -1,14 +1,25 @@
 require('module-alias/register');
 
+const path = require('path');
 const koa = require('koa');
 const cors = require('@koa/cors');
 const koaBody = require('koa-body');
 const koaLogger = require('koa-logger');
+const proxyMiddlewares = require('@/middleware/proxy');
+const koaStatic = require('koa-static');
 const router = require('./src/route');
 
 const app = new koa();
 
 app.use(cors());
+
+app.use(koaStatic(
+  path.join(__dirname, './static')
+));
+
+proxyMiddlewares.forEach(proxy => {
+  app.use(proxy);
+});
 
 app.use(koaBody());
 
