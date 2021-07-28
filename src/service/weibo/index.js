@@ -8,7 +8,7 @@ const getHotSpot = async () => {
   const $ = cheerio.load(html && html.data);
   if (!$) throw new Error('UnRecorded Error');
   const line = $('#pl_top_realtimehot tbody tr');
-  const transformSrc = src => src && src.includes('http') ? src : `https://s.weibo.com/${src}`;
+  const transformSrc = src => src && src.includes('http') ? src : `https://s.weibo.com${src}`;
   const transformLine = (node, i) => {
     const rank = $('td.td-01.ranktop', node);
     const affair = $('td.td-02 a', node);
@@ -19,7 +19,7 @@ const getHotSpot = async () => {
       rank: i > 0 ? Number(rank.text()) : 'top',
       title: affair.text(),
       view: Number(view.text()),
-      src: transformSrc(affair.attr('href'))
+      src: transformSrc(affair.attr('href') || affair.attr('href_to'))
     };
   };
   const result = [];
