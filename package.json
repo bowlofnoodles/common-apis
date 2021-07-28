@@ -23,6 +23,9 @@
       "path": "node_modules/cz-conventional-changelog"
     }
   },
+  "engines": {
+    "node": "10.x|12.x|14.x"
+  },
   "author": "bowlofnoodles",
   "license": "ISC",
   "dependencies": {
