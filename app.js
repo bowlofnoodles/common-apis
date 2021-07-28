@@ -27,7 +27,7 @@ app.use(koaLogger());
 
 app.use(router.routes()).use(router.allowedMethods());
 
-const PORT = process.env['PORT'] || 627;
+const PORT = process.env['LEANCLOUD_APP_PORT'] || process.env['PORT'] || 627;
 
 app.listen(PORT, () => {
   console.log(`node server started listen on http://127.0.0.1:${PORT}`);
