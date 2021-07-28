@@ -2,7 +2,8 @@
 
 一些通用的node api，部分接口使用的前端在线例子：[每日一看](https://daily.bowlofnoodles.top)
 
-> 用vercel Functions做代理转发，结果被vercel封号了，目前域名都通不了。暂时不能在线看效果。用gitpod或者clone到本地吧..囧
+> ~~用vercel Functions做代理转发，结果被vercel封号了，目前域名都通不了。暂时不能在线看效果。用gitpod或者clone到本地吧..囧~~
+暂时解封了..
 
 ## 开发
 
@@ -53,10 +54,13 @@ npm run dev
 
 ## API
 
-> 点击url，可以查看获取结果。因为是~~部署在heroku上，所以有点慢...~~，现在部署在阿里云上了，好多了...
+> 点击url，可以查看获取结果。
+~~因为是部署在heroku上，所以有点慢...~~，
+~~现在部署在阿里云上了，好多了...~~
+阿里云域名备案没备案，vercel代理的项目因为一些原因下线，所以暂时还用heroku。等我找到下一个白嫖能够解析代理到阿里云。
 ### 微博相关
 
-#### [/weibo/hot_spot](https://api.bowlofnoodles.top/common/weibo/hot_spot)
+#### [/weibo/hot_spot](https://bowlofnoodles-common-apis.herokuapp.com/weibo/hot_spot)
 
 获取微博热搜
 
@@ -71,8 +75,7 @@ npm run dev
 | src | 详情链接 | string | - |
 
 ### 豆瓣相关
-
-#### [/douban/top_250](https://api.bowlofnoodles.top/common/douban/top_250?start=0)
+#### [/douban/top_250](https://bowlofnoodles-common-apis.herokuapp.com/douban/top_250?start=0)
 
 获取豆瓣电影top250
 
