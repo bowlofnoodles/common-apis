@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon app.js",
-    "start": "cross-env NODE_ENV=production pm2 reload app.js",
+    "start": "cross-env NODE_ENV=production pm2 start app.js",
     "lint": "eslint --fix \"src/**/*.js\"",
     "commit": "git-cz"
   },
@@ -39,7 +39,8 @@
     "koa-router": "^10.0.0",
     "koa-server-http-proxy": "^0.1.0",
     "koa-static": "^5.0.0",
-    "module-alias": "^2.2.2"
+    "module-alias": "^2.2.2",
+    "pm2": "^5.1.0"
   },
   "devDependencies": {
     "commitizen": "^4.2.4",
